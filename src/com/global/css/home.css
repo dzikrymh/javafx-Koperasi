@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+}
+
+.menu-item:focused {
+    -fx-background-color: #2ecc71;
+}

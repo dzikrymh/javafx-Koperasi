@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="SlideMenu" prefHeight="550.0" prefWidth="200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.global.control.SlideMenuController">
+    <stylesheets>
+        <URL value="@/com/global/css/slidemenu.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="550.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/back.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="KelolaDataAnggota" buttonType="RAISED" onAction="#fungsi_btn" prefHeight="50.0" prefWidth="200.0" ripplerFill="#2ecc71" styleClass="JFXButton" stylesheets="@../css/slidemenu.css" text="Kelola Data Anggota">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="KelolaDataSimpanan" buttonType="RAISED" onAction="#fungsi_btn" prefHeight="50.0" prefWidth="200.0" ripplerFill="#2ecc71" styleClass="JFXButton" stylesheets="@../css/slidemenu.css" text="Kelola Data Simpanan">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="KelolaDataPinjaman" buttonType="RAISED" onAction="#fungsi_btn" prefHeight="50.0" prefWidth="200.0" ripplerFill="#2ecc71" styleClass="JFXButton" stylesheets="@../css/slidemenu.css" text="Kelola Data Pinjaman">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="KelolaDataAngsuran" buttonType="RAISED" onAction="#fungsi_btn" prefHeight="50.0" prefWidth="200.0" ripplerFill="#2ecc71" styleClass="JFXButton" stylesheets="@../css/slidemenu.css" text="Kelola Data Angsuran">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="KelolaLaporan" buttonType="RAISED" onAction="#fungsi_btn" prefHeight="50.0" prefWidth="200.0" ripplerFill="#2ecc71" styleClass="JFXButton" stylesheets="@../css/slidemenu.css" text="Kelola Laporan">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="SignOut" buttonType="RAISED" onAction="#SignOut" prefHeight="50.0" prefWidth="200.0" ripplerFill="#2ecc71" styleClass="JFXButton" stylesheets="@../css/slidemenu.css" text="Sign Out">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="time" alignment="BOTTOM_CENTER" prefHeight="70.0" prefWidth="200.0" text="Time">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" text="Date">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="565.0" prefWidth="1035.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.koperasi.control.LaporanController">
+    <stylesheets>
+        <URL value="@/com/koperasi/css/laporan.css" />
+    </stylesheets>
+   <children>
+      <TabPane fx:id="TabPane" prefHeight="530.0" prefWidth="762.0" stylesheets="@../css/laporan.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tabAnggota" text="Data Anggota">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label text="   Laporan Data Anggota" textFill="#558b2f">
+                           <font>
+                              <Font name="Segoe UI Light Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="TableAnggota" layoutX="298.0" layoutY="25.0" prefHeight="497.0" prefWidth="723.0" stylesheets="@../css/tableView.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="40.0">
+                           <columns>
+                              <TableColumn fx:id="no_anggota1" prefWidth="75.0" text="No Anggota" />
+                              <TableColumn fx:id="nama1" prefWidth="75.0" text="Nama" />
+                              <TableColumn fx:id="tgl_masuk1" prefWidth="75.0" text="Tanggal Masuk" />
+                              <TableColumn fx:id="hp1" prefWidth="75.0" text="Handphone" />
+                              <TableColumn fx:id="rt1" prefWidth="75.0" text="RT" />
+                              <TableColumn fx:id="sp1" prefWidth="75.0" text="Saldo Pokok" />
+                              <TableColumn fx:id="sw1" prefWidth="75.0" text="Saldo Wajib" />
+                              <TableColumn fx:id="ss1" prefWidth="75.0" text="Saldo Sukarela" />
+                              <TableColumn fx:id="aktif1" prefWidth="75.0" text="Aktif" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <JFXButton fx:id="cetakAnggota" layoutX="970.0" layoutY="3.0" prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" styleClass="jfxbutton" stylesheets="@../css/laporan.css" text="Cetak" textFill="WHITE" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="14.0" layoutY="40.0" prefHeight="35.0" prefWidth="149.0" text="Filter Data" textFill="#558b2f" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="Segoe UI Light Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="startDateAnggota" defaultColor="#558b2f" editable="false" layoutX="14.0" layoutY="75.0" prefWidth="183.0" promptText="Start Date" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="75.0">
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                        </JFXDatePicker>
+                        <JFXDatePicker fx:id="endDateAnggota" defaultColor="#558b2f" editable="false" layoutX="14.0" layoutY="132.0" prefWidth="183.0" promptText="End Date" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="132.0">
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                        </JFXDatePicker>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabSimpanan" text="Data Simpanan">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label text="   Laporan Data Simpanan" textFill="#558b2f">
+                           <font>
+                              <Font name="Segoe UI Light Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="TableSimpanan" layoutX="60.0" layoutY="25.0" prefHeight="497.0" prefWidth="723.0" stylesheets="@../css/tableView.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="40.0">
+                           <columns>
+                              <TableColumn fx:id="no_simpanan2" prefWidth="75.0" text="No Simpanan" />
+                              <TableColumn fx:id="tgl_simpanan2" prefWidth="75.0" text="Tanggal Simpanan" />
+                              <TableColumn fx:id="jns_simpanan2" prefWidth="75.0" text="Jenis Simpanan" />
+                              <TableColumn fx:id="jml_simpanan2" prefWidth="75.0" text="Jumlah Simpanan" />
+                              <TableColumn fx:id="no_anggota2" prefWidth="75.0" text="No Anggota" />
+                              <TableColumn fx:id="aktif2" prefWidth="75.0" text="Aktif" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="40.0" prefHeight="35.0" prefWidth="149.0" text="Filter Data" textFill="#558b2f" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="Segoe UI Light Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="startDateSimpanan" defaultColor="#558b2f" editable="false" layoutX="14.0" layoutY="75.0" prefWidth="183.0" promptText="Start Date" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="75.0">
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                        </JFXDatePicker>
+                        <JFXDatePicker fx:id="endDateSimpanan" defaultColor="#558b2f" editable="false" layoutX="14.0" layoutY="132.0" prefWidth="183.0" promptText="End Date" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="132.0">
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                        </JFXDatePicker>
+                        <JFXButton fx:id="cetakSimpanan" layoutX="941.0" layoutY="3.0" prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" styleClass="jfxbutton" stylesheets="@../css/laporan.css" text="Cetak" textFill="WHITE" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabPinjaman" text="Data Pinjaman">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label text="   Laporan Data Pinjaman" textFill="#558b2f">
+                           <font>
+                              <Font name="Segoe UI Light Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="cetakPinjaman" prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" styleClass="jfxbutton" stylesheets="@../css/laporan.css" text="Cetak" textFill="WHITE" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="17.0" layoutY="35.0" prefHeight="35.0" prefWidth="149.0" text="Filter Data" textFill="#558b2f" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="Segoe UI Light Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="startDatePinjaman" defaultColor="#558b2f" editable="false" layoutY="70.0" prefWidth="183.0" promptText="Start Date" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="75.0">
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                        </JFXDatePicker>
+                        <JFXDatePicker fx:id="endDatePinjaman" defaultColor="#558b2f" editable="false" layoutY="127.0" prefWidth="183.0" promptText="End Date" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="132.0">
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                        </JFXDatePicker>
+                        <TableView fx:id="TablePinjaman" prefHeight="497.0" prefWidth="723.0" stylesheets="@../css/tableView.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="40.0">
+                           <columns>
+                              <TableColumn fx:id="no_pinjaman3" prefWidth="75.0" text="No Pinjaman" />
+                              <TableColumn fx:id="tgl_pinjaman3" prefWidth="75.0" text="Tanggal Pinjaman" />
+                              <TableColumn fx:id="jml_pinjaman3" prefWidth="75.0" text="Jumlah Pinjaman" />
+                              <TableColumn fx:id="bunga3" prefWidth="75.0" text="Bunga" />
+                              <TableColumn fx:id="total_pinjaman3" prefWidth="75.0" text="Total Pinjaman" />
+                              <TableColumn fx:id="lama_pinjaman3" prefWidth="75.0" text="Lama Pinjaman" />
+                              <TableColumn fx:id="angsuran3" prefWidth="75.0" text="Angsuran" />
+                              <TableColumn fx:id="sisa_pinjaman3" prefWidth="75.0" text="Sisa Pinjaman" />
+                              <TableColumn fx:id="no_anggota3" prefWidth="75.0" text="No Anggota" />
+                              <TableColumn fx:id="status_pinjaman3" prefWidth="75.0" text="Status Pinjaman" />
+                              <TableColumn fx:id="aktif3" prefWidth="75.0" text="Aktif" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabAngsuran" text="Data Angsuran">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label text="   Laporan Data Angsuran" textFill="#558b2f">
+                           <font>
+                              <Font name="Segoe UI Light Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="cetakAngsuran" prefHeight="30.0" prefWidth="80.0" ripplerFill="WHITE" styleClass="jfxbutton" stylesheets="@../css/laporan.css" text="Cetak" textFill="WHITE" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="45.0" layoutY="35.0" prefHeight="35.0" prefWidth="149.0" text="Filter Data" textFill="#558b2f" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font name="Segoe UI Light Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="startDateAngsuran" defaultColor="#558b2f" editable="false" layoutX="28.0" layoutY="70.0" prefWidth="183.0" promptText="Start Date" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="75.0">
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                        </JFXDatePicker>
+                        <JFXDatePicker fx:id="endDateAngsuran" defaultColor="#558b2f" editable="false" layoutX="28.0" layoutY="127.0" prefWidth="183.0" promptText="End Date" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="132.0">
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                        </JFXDatePicker>
+                        <TableView fx:id="TableAngsuran" prefHeight="497.0" prefWidth="723.0" stylesheets="@../css/tableView.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="40.0">
+                           <columns>
+                              <TableColumn fx:id="no_angsuran4" prefWidth="75.0" text="No Angsuran" />
+                              <TableColumn fx:id="tgl_bayar4" prefWidth="75.0" text="Tanggal Bayar" />
+                              <TableColumn fx:id="no_pinjaman4" prefWidth="75.0" text="No Pinjaman" />
+                              <TableColumn fx:id="aktif4" prefWidth="75.0" text="Aktif" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

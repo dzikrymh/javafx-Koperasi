@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="HomePane" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: #34495e;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.global.control.HomeController">
+    <stylesheets>
+        <URL value="@/com/global/css/home.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="60.0" layoutY="11.0" text="Koperasi Rukun Tetangga Sindangsari 1" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="TargetPane" layoutY="50.0" prefHeight="550.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="200.0" prefHeight="550.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <JFXHamburger fx:id="hamburger" layoutX="14.0" layoutY="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <MenuButton alignment="CENTER" contentDisplay="CENTER" layoutX="964.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="64.0" stylesheets="@../css/home.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <MenuItem fx:id="changePassword" mnemonicParsing="false" onAction="#ubahPassOnAction" text="Ubah Kata Sandi" />
+        </items>
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Menu%202-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MenuButton>
+   </children>
+</AnchorPane>

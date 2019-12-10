@@ -1,0 +1,25 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-radius: 6;
+    -fx-border-color: gray;
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-effect: dropshadow(three-pass-box, rgba(100, 100, 100, 1), 24, 0.5, 0, 0);
+}
+
+.jfxbutton:hover {
+    -fx-background-color: #cc0000;
+}
+
+.jfx-textfield {
+    -fx-text-fill: #ffffff;
+}
+
+.jfxbuttonsign:hover {
+    -fx-background-color: #34495E;
+}

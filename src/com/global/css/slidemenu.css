@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.JFXButton {
+    -fx-background-color: #f1f1f1;
+}
+
+.JFXButton:hover {
+    -fx-background-color: #bdc3c7;
+}
